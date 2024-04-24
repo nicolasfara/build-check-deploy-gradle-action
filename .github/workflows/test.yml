@@ -11,7 +11,7 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [ windows-2022, macos-12, ubuntu-22.04 ]
+        os: [ windows-2022, macos-14, ubuntu-22.04 ]
     runs-on: ${{ matrix.os }}
     concurrency:
       group: ${{ github.workflow }}-build-${{ matrix.os }}-${{ github.event.number || github.ref }}
